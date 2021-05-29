@@ -1,0 +1,39 @@
+{
+  "name": "react-webpack5-starter",
+  "version": "1.0.0",
+  "description": "React 17 and Webpack 5",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "webpack serve --config ./config/webpack.config.js --env env=dev",
+    "build:dev": "webpack --config ./config/webpack.config.js --env env=dev",
+    "build:prod": "webpack --config ./config/webpack.config.js --env env=prod",
+    "bundle:analyze:dev": "webpack --config ./config/webpack.config.js --mode=development --env env=analyze && npm run view:analyze",
+    "bundle:analyze:prod": "webpack --config ./config/webpack.config.js --mode=production --env env=analyze && npm run view:analyze",
+    "view:analyze": "http-server reports",
+    "demo": "http-server ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Per Jonsson",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "*",
+    "css-loader": "^5.2.6",
+    "dotenv-webpack": "^7.0.2",
+    "html-webpack-plugin": "^5.3.1",
+    "http-server": "^0.12.3",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.37.1",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  }
+}
