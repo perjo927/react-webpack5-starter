@@ -1,6 +1,6 @@
 # React Webpack 5 Starter
 
-Gives you a minimal setup to get started with React and Webpack 5. Also comes with linting, formatting and a test setup.
+Gives you a minimal setup to get started with React and Webpack 5. Also comes with linting, formatting and a test setup, plus a Github Action for continuous integration.
 
 ## Pre-requisites
 
