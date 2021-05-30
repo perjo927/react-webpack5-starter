@@ -11,29 +11,50 @@
     "bundle:analyze:prod": "webpack --config ./config/webpack.config.js --mode=production --env env=analyze && npm run view:analyze",
     "view:analyze": "http-server reports",
     "demo": "http-server ./dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint test/**/*.{js,jsx} config/**/*.js src/**/*.{js,jsx}",
+    "lint:fix": "eslint test/**/*.{js,jsx} config/**/*.js src/**/*.{js,jsx} --fix",
+    "test": "jest --coverage",
+    "test:watch": "jest --watchAll"
   },
   "author": "Per Jonsson",
   "license": "MIT",
   "dependencies": {
+    "proptypes": "^1.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
+    "@babel/eslint-parser": "^7.14.4",
+    "@babel/eslint-plugin": "^7.13.16",
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "*",
     "css-loader": "^5.2.6",
     "dotenv-webpack": "^7.0.2",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-webpack-plugin": "^2.5.4",
     "html-webpack-plugin": "^5.3.1",
     "http-server": "^0.12.3",
+    "jest": "^27.0.3",
+    "prettier": "^2.3.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.37.1",
     "webpack-bundle-analyzer": "^4.4.2",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   }
 }
