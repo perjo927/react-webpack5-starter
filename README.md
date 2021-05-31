@@ -55,11 +55,11 @@ Requires a previous build.
 
 ### Single Run
 
-`$npm run test`
+`$ npm run test`
 
 ### Watch
 
-`$npm run test:watch`
+`$ npm run test:watch`
 
 ## Author
 
