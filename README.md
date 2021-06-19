@@ -37,7 +37,7 @@ Gives you a minimal setup to get started with React and Webpack 5. Also comes wi
 
 ## Demo Server
 
-Requires a previous build.
+Requires a previous build
 
 `$ npm run demo`
 
