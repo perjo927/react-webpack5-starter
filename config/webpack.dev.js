@@ -17,7 +17,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "The Economist Auth Development",
+      title: "React Webpack 5 Starter",
       env: "development",
       template: path.resolve(__dirname, "..", "./src/index.html"),
       filename: "index.html",
