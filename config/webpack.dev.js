@@ -17,7 +17,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "The Economist Auth Development",
+      favicon: path.resolve(__dirname, "..", "./src/assets/favicon.ico"),
+      title: "React Webpack 5 Starter: Development",
       env: "development",
       template: path.resolve(__dirname, "..", "./src/index.html"),
       filename: "index.html",
