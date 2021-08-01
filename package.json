@@ -11,8 +11,8 @@
     "bundle:analyze:prod": "webpack --config ./config/webpack.config.js --mode=production --env env=analyze && npm run view:analyze",
     "view:analyze": "http-server ./reports",
     "demo": "http-server ./dist",
-    "lint": "eslint test/**/*.{js,jsx} config/**/*.js src/**/*.{js,jsx}",
-    "lint:fix": "eslint test/**/*.{js,jsx} config/**/*.js src/**/*.{js,jsx} --fix",
+    "lint": "eslint test/**/*.js config/**/*.js src/**/*.{js,jsx}",
+    "lint:fix": "eslint test/**/*.js config/**/*.js src/**/*.{js,jsx} --fix",
     "test": "jest --coverage",
     "test:watch": "jest --watchAll"
   },
